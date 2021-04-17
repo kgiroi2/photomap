@@ -14,15 +14,13 @@
  */
 function createPhotoMap () {
   // URL of a Google Sheets spreadsheet output as CSV
-  var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSuESp280YE8_PokNYJSK_V3zxGh7ZJlDqMNeliCoz1kt6q2ii7lRovZ-yMlEFY2n6rhUu3vOpnvFGx/pub?gid=0&single=true&output=csv';
-  
-  // create map object with center lat/lon and zoom level
-  var map = L.map('map').setView([30.44, -91.187], 13);
+  var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT4jF_hg5kG_wEwDS_-tZGnqXx50miFYMAFqPk6iPvT98F2qsgohmdz4W0EkY3YjXkRu7uQb2fHRf82/pub?gid=0&single=true&output=csv'// create map object with center lat/lon and zoom level
+  var map = L.map('map').setView([20.95, -90.070], 13);
   
   // create basemap object. See examples at https://leaflet-extras.github.io/leaflet-providers/preview/
-  var basemap = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
+  var basemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
   	maxZoom: 16,
-  	attribution: 'USGS'
+  	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC'
   }).addTo(map);
   
   // use Papa Parse (papaparse.com) to get the Google Sheets CSV
