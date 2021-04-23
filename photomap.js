@@ -18,9 +18,10 @@ function createPhotoMap () {
   var map = L.map('map').setView([29.9512, -90.0715], 16);
   
   // create basemap object. See examples at https://leaflet-extras.github.io/leaflet-providers/preview/
-  var basemap = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
+  var basemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   	maxZoom: 16,
-  	attribution: 'USGS'  }).
+  	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'  
+  }).
     addTo(map);
   
   // use Papa Parse (papaparse.com) to get the Google Sheets CSV
