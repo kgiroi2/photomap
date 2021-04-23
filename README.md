@@ -14,3 +14,4 @@ description | A sentence or two describing the location in more detail    |
 lat         | Latitude in decimal degrees                                 |
 long        | Longitude in decimal degrees                                |
 pic_url     | The URL to an image that will be displayed in the popup     |
+<https://kgiroi2.github.io/photomap/>
